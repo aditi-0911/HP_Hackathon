@@ -41,20 +41,42 @@ Here's an overview of the main files and directories in this repository:
 - `templates/`: This directory houses the HTML templates used for this project's web-based user interface. These templates define the structure and layout of the generated webpages. 
     - `index.html`: This is the main HTML template that serves as the entry point for the web application. It is responsible for rendering the user interface and allowing users to interact with the time-telling worksheet generator.
     
-- `worksheets/`: This directory houses the python codes used for generating different worksheets.
+- `MAC-compatible/`: This directory houses the python codes used for generating different worksheets.
+    - `static`:
+        - `style_greeting.css`:This CSS file is specifically designed to style the greeting page of the Time-Telling Worksheet Generator.
+        - `styles.css`:The styles.css file is a global stylesheet that impacts the overall appearance and design of various webpages throughout the application.
+    - `templates/`: This directory houses the HTML templates used for this project's web-based user interface. These templates define the structure and layout of the generated webpages. 
+        - `input_form.html`:This template serves as the input form for users to specify their name and age when generating time-telling worksheets.
+        - `greeting_page.html`:The greeting page template plays a crucial role in welcoming users to generate different types of worksheets.
+    - `app.py`: This file contains the Flask code that serves as the core of our web application. It handles routing, rendering HTML templates, and generating time-telling worksheets based on user inputs.
     - `clock_without_hands_words1.py`:  Generates worksheets where clock hands are omitted, and students must draw the hands of clock given time in words.
     - `write_time_in_numbers.py`: Generates worksheets where students write the time using numerical digits.
     - `draw_the_time.py`: Generates worksheets where students draw clock hands to represent given times.
     - `guess_the_time_1.py`: Generates worksheets where students must guess the time based on visual cues.
     - `match_clock_wordtime.py`: Generates worksheets for matching analog clocks with their corresponding time in words.
-    - `match_the_time_num.py`:	Generates worksheets for matching analog clocks with their corresponding numerical times.
+    - `match_the_time_num.py`:  Generates worksheets for matching analog clocks with their corresponding numerical times.
     - `match_the_time_words.py`: Generates worksheets for matching numerical times with their corresponding time in words.
+    - `diall.png`:This file contains the image of clock without hands used for generating clocks with hands.
+
+- `Windows-compatible/`: This directory houses the python codes used for generating different worksheets.
+    - `static`:
+        - `style_greeting.css`:This CSS file is specifically designed to style the greeting page of the Time-Telling Worksheet Generator.
+        - `styles.css`:The styles.css file is a global stylesheet that impacts the overall appearance and design of various webpages throughout the application.
+    - `templates/`: This directory houses the HTML templates used for this project's web-based user interface. These templates define the structure and layout of the generated webpages. 
+        - `input_form.html`:This template serves as the input form for users to specify their name and age when generating time-telling worksheets.
+        - `greeting_page.html`:The greeting page template plays a crucial role in welcoming users to generate different types of worksheets.
+    - `app.py`: This file contains the Flask code that serves as the core of our web application. It handles routing, rendering HTML templates, and generating time-telling worksheets based on user inputs.
+    - `clock_without_hands_words1.py`:  Generates worksheets where clock hands are omitted, and students must draw the hands of clock given time in words.
+    - `write_time_in_numbers.py`: Generates worksheets where students write the time using numerical digits.
+    - `draw_the_time.py`: Generates worksheets where students draw clock hands to represent given times.
+    - `guess_the_time_1.py`: Generates worksheets where students must guess the time based on visual cues.
+    - `match_clock_wordtime.py`: Generates worksheets for matching analog clocks with their corresponding time in words.
+    - `match_the_time_num.py`:  Generates worksheets for matching analog clocks with their corresponding numerical times.
+    - `match_the_time_words.py`: Generates worksheets for matching numerical times with their corresponding time in words.
+    - `diall.png`:This file contains the image of clock without hands used for generating clocks with hands.
 
 - `README.md`: You're currently reading this file. It provides an overview of the project.
 
-- `app.py`: This file contains the Flask code that serves as the core of our web application. It handles routing, rendering HTML templates, and generating time-telling worksheets based on user inputs.
-
-- `diall.png`:This file contains the image of clock without hands used for generating clocks with hands.
 
 
 Feel free to explore each directory and file for more details about the project's structure and code.
@@ -63,10 +85,12 @@ Feel free to explore each directory and file for more details about the project'
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/your-repo.git
-
-# Change directory to the project folder
-cd your-repo
+git clone https://github.com/aditi-0911/HP_Hackathon.git
 
 # Install dependencies (if applicable)
-pip install -r requirements.txt
+pip install Pillow
+pip install reportlab 
+pip install Flask
+
+#Execute Flask app
+flask --app app run
