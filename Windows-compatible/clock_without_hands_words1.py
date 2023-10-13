@@ -8,7 +8,7 @@ def clock_without_hands_words():
     location = os.getcwd()
     num_clocks=5
     # Open the original image
-    original_image_path = "path_to_original_image.png"  # Replace with your image path
+    
     original_image = Image.open(location + '\diall.png')
 
     # Define the output PDF file name

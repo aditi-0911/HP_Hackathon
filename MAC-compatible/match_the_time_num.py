@@ -16,16 +16,22 @@ def match_the_time_num():
 
     def hour(array):
         while(len(array)!=num_clocks):
+            #for i in range(num_clocks):
             y = random.randrange(1,13)
             array.add(y)
+            
+
         return list(array)
+    
+    
 
     def minute(array):
         while(len(array)!=num_clocks):
+            # for i in range(num_clocks):
             y = random.randrange(0,60,5)
             array.add(y)
+                
         return list(array)
-
 
     # Function to generate a random clock dial
     def generate_clock_dial(hour, minute, second, filename="clock_dial.png"):
@@ -56,10 +62,8 @@ def match_the_time_num():
 
         # Hour hand
         hour_hand_length = clock_radius * 0.5
-        hour_x = center_x + hour_hand_length * math.cos(math.sin(math.radians(hour * 30 + 0.5 * minute)))
-        hour_y = center_y + hour_hand_length * math.sin(math.sin(math.radians(hour * 30 + 0.5 * minute)))
-        #hour_x = center_x + hour_hand_length * math.cos(hour_angle)
-        #hour_y = center_y + hour_hand_length * math.sin(hour_angle)
+        hour_x = center_x + hour_hand_length * math.cos(hour_angle)
+        hour_y = center_y + hour_hand_length * math.sin(hour_angle)
         draw.line((center_x, center_y, hour_x, hour_y), fill="black", width=6)
 
         # Minute hand

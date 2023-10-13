@@ -4,6 +4,7 @@
     <title>Greeting Page</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_greeting.css') }}">
 </head>
+
 <body>
     <h1>Hello, {{ name }}!</h1>
     <hr>
@@ -11,13 +12,13 @@
 
     <h2>Choose an option:</h2>
     <!-- <ul> -->
-        <button onclick='generatePDF("clock_without_hands_words1")'>Clock Without Hands</a></li>
-        <button onclick='generatePDF("guess_the_time_1")'>Guess the Time</a></li>
-        <button onclick='generatePDF("match_clock_wordtime")'>Match The Words with the Time</a></li>
-        <button onclick='generatePDF("match_the_time_num")'>Match the Words with time</a></li>
-        <button onclick='generatePDF("match_the_time_words")'>Match the Time in words</a></li>
-        <button onclick='generatePDF("write_time_in_numbers")'>Write the time in Numbers</a></li>
-        <button onclick='generatePDF("draw_the_time")'>draw the time</a></li>
+        <button onclick='generatePDF("clock_without_hands_words1")'>Time-telling Challenge: Hands & Words</a></li>
+        <button onclick='generatePDF("guess_the_time_1")'>Time Mastery: Clocks & Numerals</a></li>
+        <button onclick='generatePDF("match_clock_wordtime")'>Temporal Connections: Match Words to Numbers</a></li>
+        <button onclick='generatePDF("match_the_time_num")'>Time Puzzle: Clock Faces & Numbers</a></li>
+        <button onclick='generatePDF("match_the_time_words")'>Time Talk: Clock Faces and Words</a></li>
+        <button onclick='generatePDF("write_time_in_numbers")'>Time Expressions: Words into Numerals</a></li>
+        <button onclick='generatePDF("draw_the_time")'>Clock Time Practice: Numbers to Hands</a></li>
     <!-- </ul> -->
     <script>
         function generatePDF(programName) {
